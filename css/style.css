@@ -89,3 +89,25 @@ aside .ad {
   padding: 50px 0;
   background: #4264a2;
 }
+
+footer {
+  margin: 20px 0;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between; /*separar divs*/
+}
+
+footer .social-media a {
+  color: #fff;
+  text-decoration: underline;
+  margin-left: 20px;
+}
+
+footer .social-media a:hover {
+  text-decoration: none;
+}
