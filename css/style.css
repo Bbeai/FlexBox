@@ -99,7 +99,7 @@ footer {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between; /*separar divs*/
+  justify-content: space-between; /*separar divs, distribuir contenido */
 }
 
 footer .social-media a {
@@ -110,4 +110,64 @@ footer .social-media a {
 
 footer .social-media a:hover {
   text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+  .main {
+    width: 100%;
+  }
+
+  aside {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  aside .ad {
+    padding: 20px;
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column; /*un div debajo del otro
+        es decir el div del logo y el div que contiene el menu*/
+    padding-bottom: 20px;
+  }
+
+  header nav {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    padding: 10px;
+  }
+
+  header nav a {
+    margin: 0 20px;
+  }
+
+  header .logo {
+    margin-bottom: 20px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /*invertiendo orden de los divs*/
+  footer .author {
+    order: 2;
+  }
+
+  footer .social-media {
+    order: 1;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  aside {
+    display: none; /*ya no aparece el apartado */
+  }
 }
